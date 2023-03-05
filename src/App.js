@@ -1,9 +1,9 @@
 import "./App.css";
-import Modal from "./Components/Modal/Modal";
+import Home from "./Components/Home/Home";
 function App() {
   return (
     <div className="App">
-      <Modal />
+      <Home />
     </div>
   );
 }
