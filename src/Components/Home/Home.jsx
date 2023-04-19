@@ -3,11 +3,12 @@ import Modal from "../Modal/Modal";
 import Dialog from "../Dialog/Dialog";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import Shipping from "../Shipping/Shipping";
 
 const Home = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const [pin, setPin] = useState("");
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -49,6 +50,8 @@ const Home = () => {
       <div style={{ position: "relative" }}>
         <Dialog show={show}></Dialog>
       </div>
+
+      <Shipping />
     </div>
   );
 };

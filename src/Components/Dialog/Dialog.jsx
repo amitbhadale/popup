@@ -6,11 +6,11 @@ const Dialog = ({ show }) => {
     <>
       <div
         id="hovr-dialog"
-        className="nosto_element nosto-dynamic-placement"
+        className="hovr_element hovr-dynamic-placement"
         style={{ display: show ? "block" : "none" }}
       >
-        <div className="nosto-container">
-          <div className="nosto-title">&nbsp;</div>
+        <div className="hovr-container">
+          <div className="hovr-title">&nbsp;</div>
           <div className="list-container">
             <span>
               Confirm this item fits your vehicle by clicking FITS THESE
