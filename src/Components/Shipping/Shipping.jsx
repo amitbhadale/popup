@@ -15,6 +15,16 @@ const Shipping = () => {
       type: "Express",
       price: "9.95",
     },
+    {
+      id: 3,
+      type: "Some another",
+      price: "9.95",
+    },
+    {
+      id: 4,
+      type: "Type 13",
+      price: "9.95",
+    },
   ]);
   const [selectedValue, setSelectedValue] = useState(0);
 

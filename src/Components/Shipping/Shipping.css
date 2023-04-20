@@ -1,7 +1,7 @@
 .shipping-box{
     margin-top: 5%;
-    width: 50%;
-    margin-left: 5%;
+    /* width: 100%;
+    margin-left: 5%; */
 }
 .shipping-box .shipList .shipType {
     display: flex;
