@@ -1,0 +1,122 @@
+.notify-box{
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    width: 30%;
+    h5{
+        text-transform: none;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    .notify-input-box{
+        border: 1px solid #6e6e6e61;
+        padding: 30px 15px;
+        border-radius: 4px;
+        .mobile-sec{ 
+            margin-bottom: 20px;      
+            .text-box{
+                .inputs{
+                    display: flex;
+                    margin-bottom: 15px;
+                    .dropdwn{
+                        position: relative;
+                        flex: 1;
+                        ul{
+                            height: 50px;
+                            overflow: hidden;
+                            position: absolute;
+                            z-index: 2;
+                            background: #fff;
+                            width: 100%;
+                            // border: 1px solid #6c6c6c;
+                            li{
+                                display: flex;
+                                justify-content: space-around;
+                                padding: 2px;
+                                align-items: center;
+                                height: 50px;
+                                cursor: pointer;
+                                img{
+                                    // margin-right: 2px;
+                                }
+                                span{
+
+                                }
+                                &:hover{
+                                    background: #ccc;
+                                }
+                            }
+                            &.open{
+                                border: 1px solid #6c6c6c;
+                                border-radius: 3px;
+                                height: auto;
+                            }
+                        }
+                                            
+                    }
+                    .mobile-input{
+                        flex: 4;
+                        input{
+                            outline: none!important;
+                            height: 50px;
+                            padding: 0 14px;
+                            font-size: 16px;
+                            line-height: 26px;
+                            letter-spacing: 1px;
+                            color: #102b4e;
+                            border-radius: 3px;
+                            border: 1px solid #6e6e6e;
+                            width: 100%;
+                            // margin: 15px 0px;
+                        }
+                    }
+                }
+                button.txt-me-button{
+                    background: #102b4e;
+                    padding: 12px;
+                    width: 100%;
+                    cursor: pointer;
+                    color: #fff;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    resize: none;
+                    border: none;
+                    outline: none!important;
+                    border-radius: 2px;
+                }
+            }
+    }
+        .email-sec{
+            .inputs{
+                input{
+                    outline: none!important;
+                    height: 50px;
+                    padding: 0 14px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 1px;
+                    color: #102b4e;
+                    border-radius: 3px;
+                    border: 1px solid #6e6e6e;
+                    width: 100%;
+                    margin: 15px 0px;
+                }
+                button.email-me-button{
+                    background: #102b4e;
+                    padding: 12px;
+                    width: 100%;
+                    cursor: pointer;
+                    color: #fff;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    resize: none;
+                    border: none;
+                    outline: none!important;
+                    border-radius: 2px;
+                    display: block;
+                }
+            }
+        }
+    }
+}

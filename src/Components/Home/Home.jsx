@@ -4,6 +4,7 @@ import Dialog from "../Dialog/Dialog";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Shipping from "../Shipping/Shipping";
+import Notify from "../Notify/Notify";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,8 @@ const Home = () => {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Notify></Notify>
+      {/* <Button variant="outlined" onClick={handleClickOpen}>
         Open dialog {open}
       </Button>
 
@@ -37,21 +39,21 @@ const Home = () => {
         value={pin}
         onChange={(e) => setPin(e.target.value)}
       />
-      {pin}
+      {pin} */}
 
-      <div className="">
+      {/* <div className="">
         <button
           onMouseEnter={() => setShow(true)}
           onMouseLeave={() => setShow(false)}
         >
           Hover to show Popup dialog {`${show}`}
         </button>
-      </div>
-      <div style={{ position: "relative" }}>
+      </div> */}
+      {/* <div style={{ position: "relative" }}>
         <Dialog show={show}></Dialog>
-      </div>
+      </div> */}
 
-      <Shipping />
+      {/* <Shipping /> */}
     </div>
   );
 };
