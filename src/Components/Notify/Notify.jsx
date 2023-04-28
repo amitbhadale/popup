@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Notify.scss";
 
 const Notify = () => {
@@ -42,11 +42,14 @@ const Notify = () => {
   ]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const openDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const countryselect = (country) => {
+
+  const countryselect = (country, index) => {
     setSelectedCountry(country);
+    setSelectedIndex(index);
     setIsOpen(false);
   };
   return (
@@ -62,13 +65,31 @@ const Notify = () => {
                   className={isOpen ? "open" : ""}
                   onClick={() => openDropdown()}
                 >
-                  {countryList.map((item) => {
+                  {selectedCountry ? (
+                    <li
+                      onClick={() =>
+                        countryselect(
+                          countryList[selectedIndex].code,
+                          selectedIndex
+                        )
+                      }
+                    >
+                      <img src={countryList[selectedIndex].imageURL} alt="" />{" "}
+                      <span>{countryList[selectedIndex].code}</span>
+                    </li>
+                  ) : null}
+
+                  {countryList.map((item, i) => {
                     const { code, id, imageURL } = item;
-                    return (
-                      <li key={id} onClick={() => countryselect(code)}>
+                    return selectedIndex !== i ? (
+                      <li
+                        order={i}
+                        key={id}
+                        onClick={(e) => countryselect(code, i)}
+                      >
                         <img src={imageURL} alt="" /> <span>{code}</span>
                       </li>
-                    );
+                    ) : null;
                   })}
                 </ul>
               </div>
