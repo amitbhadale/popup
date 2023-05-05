@@ -52,6 +52,10 @@ const Notify = () => {
     setSelectedIndex(index);
     setIsOpen(false);
   };
+  useEffect(() => {
+    setSelectedCountry(countryList[0].code);
+  }, [countryList]);
+
   return (
     <div className="notify-box">
       <div className="notify-input-box">
@@ -80,14 +84,15 @@ const Notify = () => {
                   ) : null}
 
                   {countryList.map((item, i) => {
-                    const { code, id, imageURL } = item;
+                    const { code, id, imageURL, name } = item;
                     return selectedIndex !== i ? (
                       <li
                         order={i}
                         key={id}
                         onClick={(e) => countryselect(code, i)}
                       >
-                        <img src={imageURL} alt="" /> <span>{code}</span>
+                        <img src={imageURL} alt="" /> <span>{name}</span>{" "}
+                        <span>{code}</span>
                       </li>
                     ) : null;
                   })}
