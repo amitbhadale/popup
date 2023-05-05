@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Notify.scss";
 
 const Notify = () => {
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef);
+
   const [countryList, setCountryList] = useState([
     {
       id: "1",
@@ -47,6 +50,22 @@ const Notify = () => {
     setIsOpen(!isOpen);
   };
 
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsOpen(false);
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
+
   const countryselect = (country, index) => {
     setSelectedCountry(country);
     setSelectedIndex(index);
@@ -64,7 +83,7 @@ const Notify = () => {
             <h5>Select Country:</h5>
 
             <div className="inputs">
-              <div className="dropdwn">
+              <div className="dropdwn" ref={wrapperRef}>
                 <ul
                   className={isOpen ? "open" : ""}
                   onClick={() => openDropdown()}
