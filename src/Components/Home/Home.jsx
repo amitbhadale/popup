@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Shipping from "../Shipping/Shipping";
 import Notify from "../Notify/Notify";
+import Rewards from "../Rewards/Rewards";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -21,7 +22,8 @@ const Home = () => {
 
   return (
     <div>
-      <Notify></Notify>
+      <Rewards></Rewards>
+      {/* <Notify></Notify> */}
       {/* <Button variant="outlined" onClick={handleClickOpen}>
         Open dialog {open}
       </Button>

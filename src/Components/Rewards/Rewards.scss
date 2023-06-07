@@ -1,0 +1,159 @@
+@import '../../media-queries.scss';
+
+.rew-cont{
+    padding: 0px 30px;
+    max-width: 1299px;
+    margin: auto;
+    @include xs {
+        padding: 0px 30px;
+    }
+    .title{
+        @include xs {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        h3{
+            margin-bottom: 30px;
+            margin-top: 0;
+            letter-spacing: 4px;
+            font-size: 34px;
+            font-weight: 300;
+            color: #4d4d4d;
+            @include xs {
+                font-size: 24px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .rew-box{
+        width: 100%;
+        height: 400px;
+        background-color: #102b4e;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 4px;
+        @include xs {
+            height: auto;
+        }
+        .text-box{
+            width: 50%;
+            display: flex;
+            margin: auto;
+            @include xs {
+                width: 100%;
+            }
+            @include sm {
+                width: 100%;
+            }
+            .text-wrap{
+                margin: auto;
+                width: 80%;
+                .head{
+                    h2{
+                        color: white !important;
+                        font-size: 2.2rem !important;
+                        margin-bottom: 30px;
+                        margin-top: 0;
+                        letter-spacing: 4px;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        @include xs {
+                            margin-top: 15px;
+                        }
+                        @include sm {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+                p{
+                    margin-bottom: 2rem;
+                    color: #ffffffcc;
+                    line-height: 30px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    font-size: 16px;
+                }
+                .btnz{
+                    margin: 1rem 0;
+                    display: block;
+                    @include xs {
+                        height: auto;
+                        padding: 0;
+                    }
+                    @include md {
+                        padding: 0;
+                    }
+                    &.center{
+                        display: flex;
+                    }
+                    &:hover{
+                        background-color: unset;
+                    }
+                    a{
+                        text-decoration: none;
+                        display: inline-flex;
+                        box-shadow: 0 20px 20px #0000001a, 0 10px 10px #0000001a;
+                        border-radius: 20px;
+                        transition: .2s all ease-in-out;
+                        cursor: pointer;
+                        font-size: 18px;
+                        font-family: Ford Antenna Cond,sans-serif;
+                        letter-spacing: 1px;
+                        min-width: 165px;
+                        height: 40px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        align-items: center;
+                        
+                        &.join{
+                            background-color: white;
+                            color: black;
+                            margin: 0;
+                            border: 1px black solid;
+                        }
+                        
+                        &.learn{
+                            background-color: transparent;
+                            color: white;
+                            border: 1px white solid;
+                            margin-left: 30px;
+                            @include xs {
+                                margin-left: auto;
+                            }
+                            &:hover{
+                                background-color: #fff;
+                                color: #102b4e;
+                            }
+                        }
+                        @include xs {
+                            margin: 1rem 0;
+                            width: 100%;
+                            justify-content: center;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .pic{
+            width: 50%;
+            height: 100%;
+            @include sm {
+                width: 100%;
+            }
+            @include xs {
+                width: 100%;
+            }
+            img{
+                filter: blur(0px);
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                object-fit: cover;
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+}
